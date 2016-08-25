@@ -1,6 +1,6 @@
 {
   "name": "chron",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A tiny library to parse and store a structured time format for exact dates or intervals when the exact date or time is unknown",
   "main": "index.js",
   "repository": {
@@ -22,10 +22,8 @@
   },
   "homepage": "https://github.com/mattiasrunge/chron#readme",
   "dependencies": {
-    "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
-    "babel-plugin-transform-es2015-block-scoping": "^6.14.0",
-    "moment": "^2.14.1",
-    "moment-timezone": "^0.5.5"
+    "moment": "2.14.1",
+    "moment-timezone": "0.5.5"
   },
   "devDependencies": {
     "chai": "3.5.0",
@@ -33,8 +31,10 @@
     "mocha": "3.0.2",
     "jshint": "2.9.3",
     "jscs": "3.0.7",
-    "babel-cli": "6.11.4",
-    "babel-plugin-transform-es2015-modules-amd": "6.8.0"
+    "babel-cli": "6.14.0",
+    "babel-plugin-transform-es2015-modules-amd": "6.8.0",
+    "babel-plugin-transform-es2015-arrow-functions": "6.8.0",
+    "babel-plugin-transform-es2015-block-scoping": "6.14.0"
   },
   "engines": {
     "node": ">= 5.7.0"

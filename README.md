@@ -6,16 +6,4 @@ A tiny library to parse and store a structured time format for exact dates or in
 
 ## Usage
 
-### node.js
-```js
-const chron = require("chron");
-    // TODO
-```
-
-### browser
-```js
-
-define([ "chron" ], (chron) => {
-    // TODO
-});
-```
+See tests
