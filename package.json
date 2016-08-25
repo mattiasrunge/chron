@@ -1,11 +1,11 @@
 {
-  "name": "chron",
+  "name": "chron-time",
   "version": "0.0.1",
   "description": "A tiny library to parse and store a structured time format for exact dates or intervals when the exact date or time is unknown",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mattiasrunge/chron.git"
+    "url": "git+https://github.com/mattiasrunge/chron-time.git"
   },
   "keywords": [
     "time",
@@ -18,9 +18,9 @@
   "author": "Mattias Runge <mattias@runge.se>",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/mattiasrunge/chron/issues"
+    "url": "https://github.com/mattiasrunge/chron-time/issues"
   },
-  "homepage": "https://github.com/mattiasrunge/chron#readme",
+  "homepage": "https://github.com/mattiasrunge/chron-time#readme",
   "dependencies": {
     "moment": "2.14.1",
     "moment-timezone": "0.5.5"
