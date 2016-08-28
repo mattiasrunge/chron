@@ -85,6 +85,7 @@ const validate = (input, type) => {
 const parsetime = (time, timeIsDstAdjusted) => {
     let timestamp = false;
     let quality = false;
+    let accuracy = false;
 
     if (time) {
         let utcOffset = 0;
@@ -96,31 +97,37 @@ const parsetime = (time, timeIsDstAdjusted) => {
         if (time.year) {
             foundRange = time.year instanceof Array;
             spec.year = parseInt(foundRange ? time.year[0] : time.year, 10);
+            accuracy = "year";
         }
 
         if (time.month && !foundRange) {
             foundRange = time.month instanceof Array;
             spec.month = parseInt(foundRange ? time.month[0] : time.month, 10) - 1; // Moment expects zero based
+            accuracy = "month";
         }
 
         if (time.day && !foundRange) {
             foundRange = time.day instanceof Array;
             spec.day = parseInt(foundRange ? time.day[0] : time.day, 10);
+            accuracy = "day";
         }
 
         if (time.hour && !foundRange) {
             foundRange = time.hour instanceof Array;
             spec.hour = parseInt(foundRange ? time.hour[0] : time.hour, 10);
+            accuracy = "hour";
         }
 
         if (time.minute && !foundRange) {
             foundRange = time.minute instanceof Array;
             spec.minute = parseInt(foundRange ? time.minute[0] : time.minute, 10);
+            accuracy = "minute";
         }
 
         if (time.second && !foundRange) {
             foundRange = time.second instanceof Array;
             spec.second = parseInt(foundRange ? time.second[0] : time.second, 10);
+            accuracy = "second";
 
             if (!foundRange) {
                 quality = "local";
@@ -141,7 +148,8 @@ const parsetime = (time, timeIsDstAdjusted) => {
 
     return {
         timestamp: timestamp,
-        quality: quality
+        quality: quality,
+        accuracy: accuracy
     };
 };
 
